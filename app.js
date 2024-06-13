@@ -99,3 +99,42 @@ for(let i=0; i<fam.length; i++){
     console.log(`Miembro mayor: ${mayor.name} de ${mayor.edad} años.`);
     console.log(`Miembro más joven: ${menor.name} de ${menor.edad} años.`);
 }
+//Ejercicio-7-Arrays
+const color=['rojo','verde','azul'];
+const result= list(color);
+
+function list(arr){
+    return arr.join('-');
+}
+
+console.log(result);
+
+//Ejercicio-8-Arrays
+const num=[1,2,3,4,5,6,7,8,9];
+function sumaLista(){
+    let suma=0;
+    for(let i=0; i<num.length; i++){
+        suma+=num[i];
+    }
+    return suma;
+}
+console.log (sumaLista());
+
+//Ejercicio-9-Arrays
+const service= [
+    {dia: 'lunes', persona: 'María' },
+    {dia: 'martes', persona: 'Luis' },
+    {dia: 'miercoles', persona: 'Antonia' },
+    {dia: 'jueves', persona: 'Pedro' },
+    {dia: 'viernes', persona: 'Marisa' },
+];
+
+function serv(dia){
+    const dianMin =dia.toLowerCase();
+    const tocaservice=service.find(serv=>serv.dia===diaMin);
+    if(tocaservice){
+        return `Este día se encarga ${tocaservice.persona}`;
+    } else{
+        return "No hay servicio";
+    }
+}
