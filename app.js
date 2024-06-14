@@ -28,6 +28,8 @@
 // callTwice(rollDie)
 
 
+
+//----A R R E G L O S----
 //Ejercicio-1-Arrays
 var weekDays;
 weekDays=arr(6);
@@ -131,10 +133,33 @@ const service= [
 
 function serv(dia){
     const dianMin =dia.toLowerCase();
-    const tocaservice=service.find(serv=>serv.dia===diaMin);
-    if(tocaservice){
-        return `Este día se encarga ${tocaservice.persona}`;
+    const tocaService=service.find(serv=>serv.dia===diaMin);
+    if(tocaService){
+        return `Este día se encarga ${tocaService.persona}`;
     } else{
         return "No hay servicio";
     }
 }
+
+//----O B J E T O S----
+//Ejercicio-1-Objects
+const statusal ={
+    name: 'Gabriel Rivera',
+    calif:{
+    english: 8,
+    programation: 7,
+    html: 8,
+}
+};
+function calcMedia(calif){
+    let sum=0;
+    let cant=0;
+
+    for (let clase in calif){
+        sum+=calif[clase];
+        cant++;
+    }
+    return sum/cant;
+}
+console.log(`Nombre alumno: ${statusal.name}`);
+console.log(`Media calificaciones: ${calcMedia(statusal.calif)}`);
